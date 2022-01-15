@@ -1,75 +1,74 @@
 {
-    "name": "blockchain-workshop",
-    "description": "",
-    "license": "MIT",
-    "author": "",
-    "homepage": "",
-    "version": "0.0.1",
-    "main": "dist/js/src/HeadTail.js",
-    "files": [
-        "dist/js/build",
-        "dist/js/src"
-    ],
-    "directories": {
-        "test": "test"
-    },
-    "scripts": {
-        "build": "yarn compile && yarn build:ts",
-        "compile": "oz compile",
-        "build:ts": "tsc -b tsconfig.build.json --verbose --pretty",
-        "clean": "shx rm -rf dist build",
-        "start": "ts-node src/HeadTail.ts",
-        "start:ganache": "ganache-cli -q -m 'chalk park staff buzz chair purchase wise oak receive avoid avoid home' -l 8000000 -e 1000000 -a 20 -g 0",
-        "test": "mocha -r ts-node/register src/test/*.test.ts --timeout 60000 --exit",
-        "test:contracts": "yarn test:concurrent",
-        "prettier": "prettier --write --config-precedence file-override './src/**/*'",
-        "ui": "cross-env NODE_OPTIONS=\"--max_old_space_size=8192\" webpack-dev-server --watch"
-    },
-    "types": "dist/js/src/index.d.ts",
-    "dependencies": {
-        "@openzeppelin/contract-loader": "0.6.1",
-        "web3": "1.2.6"
-    },
-    "devDependencies": {
-        "@openzeppelin/cli": "2.8.0-rc.0",
-        "@types/chai": "4.2.9",
-        "@types/mocha": "7.0.1",
-        "@types/node": "12.12.27",
-        "@types/react": "16.9.21",
-        "@types/react-dom": "16.9.5",
-        "@typescript-eslint/eslint-plugin": "2.19.2",
-        "@typescript-eslint/parser": "2.19.2",
-        "chai": "4.2.0",
-        "cross-env": "7.0.0",
-        "css-loader": "3.4.2",
-        "eslint": "6.8.0",
-        "eslint-config-airbnb-base": "14.0.0",
-        "eslint-config-prettier": "6.10.0",
-        "eslint-plugin-import": "2.20.1",
-        "eslint-plugin-prettier": "3.1.2",
-        "eslint-plugin-react": "7.18.3",
-        "ethlint": "1.2.5",
-        "extract-text-webpack-plugin": "3.0.2",
-        "fork-ts-checker-webpack-plugin": "4.0.4",
-        "ganache-cli": "6.9.1",
-        "html-webpack-plugin": "3.2.0",
-        "mocha": "7.0.1",
-        "moment": "2.24.0",
-        "node-sass": "4.13.1",
-        "prettier": "1.19.1",
-        "react": "16.12.0",
-        "react-dom": "16.12.0",
-        "sass-loader": "8.0.2",
-        "shx": "0.3.2",
-        "style-loader": "1.1.3",
-        "ts-loader": "6.2.1",
-        "ts-node": "8.6.2",
-        "typescript": "3.7.5",
-        "webpack": "4.41.6",
-        "webpack-cli": "3.3.11",
-        "webpack-dev-server": "3.10.3"
-    },
-    "engines": {
-        "node": "12"
-    }
+  "name": "blockchain-workshop",
+  "version": "0.0.3",
+  "description": "",
+  "homepage": "",
+  "license": "MIT",
+  "author": "",
+  "main": "dist/js/src/HeadTail.js",
+  "types": "dist/js/src/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "dist/js/build",
+    "dist/js/src"
+  ],
+  "scripts": {
+    "build": "yarn compile && yarn build:ts",
+    "build:ts": "tsc -b tsconfig.build.json --verbose --pretty",
+    "clean": "shx rm -rf dist build",
+    "compile": "oz compile",
+    "prettier": "prettier --write --config-precedence file-override './src/**/*'",
+    "start": "ts-node src/HeadTail.ts",
+    "start:ganache": "ganache-cli -q -m 'chalk park staff buzz chair purchase wise oak receive avoid avoid home' -l 8000000 -e 1000000 -a 20 -g 0",
+    "test": "mocha -r ts-node/register src/test/*.test.ts --timeout 60000 --exit",
+    "test:contracts": "yarn test:concurrent",
+    "ui": "cross-env NODE_OPTIONS=\"--max_old_space_size=8192\" webpack-dev-server --watch"
+  },
+  "dependencies": {
+    "@openzeppelin/contract-loader": "0.6.3",
+    "web3": "1.6.1"
+  },
+  "devDependencies": {
+    "@openzeppelin/cli": "2.8.2",
+    "@types/chai": "4.3.0",
+    "@types/mocha": "9.0.0",
+    "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "chai": "4.3.4",
+    "cross-env": "7.0.3",
+    "css-loader": "6.5.1",
+    "eslint": "8.6.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.28.0",
+    "ethlint": "1.2.5",
+    "fork-ts-checker-webpack-plugin": "6.5.0",
+    "ganache-cli": "6.12.2",
+    "html-webpack-plugin": "5.5.0",
+    "mocha": "9.1.4",
+    "moment": "2.29.1",
+    "node-sass": "7.0.1",
+    "prettier": "2.5.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass-loader": "12.4.0",
+    "shx": "0.3.4",
+    "style-loader": "3.3.1",
+    "ts-loader": "9.2.6",
+    "ts-node": "10.4.0",
+    "typescript": "^4.5.4",
+    "webpack": "5.66.0",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "4.7.3"
+  },
+  "engines": {
+    "node": "17"
+  }
 }
